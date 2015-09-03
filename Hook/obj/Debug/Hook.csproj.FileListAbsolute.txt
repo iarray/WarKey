@@ -1,0 +1,5 @@
+d:\我的文档\VS项目\MouseChangeKey-鼠标改键\Hook\bin\Debug\Hook.dll
+d:\我的文档\VS项目\MouseChangeKey-鼠标改键\Hook\bin\Debug\Hook.pdb
+d:\我的文档\VS项目\MouseChangeKey-鼠标改键\Hook\obj\Debug\Hook.dll
+d:\我的文档\VS项目\MouseChangeKey-鼠标改键\Hook\obj\Debug\Hook.pdb
+D:\我的文档\VS项目\MouseChangeKey-鼠标改键\Hook\obj\Debug\Hook.csprojResolveAssemblyReference.cache

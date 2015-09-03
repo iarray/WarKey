@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="MouseChangeKey_鼠标改键.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="MainWindow"
+	Height="370"
+	Width="275"
+	Background="Transparent"
+	WindowStyle="None"
+	AllowsTransparency="True"
+	MouseLeftButtonDown="Window_LButtonDown"
+	ResizeMode="NoResize"
+	Loaded="Window_Loaded_1"
+	Closing="Window_Closing_1"
+	Activated="Window_Activated_1"
+	Deactivated="Window_Deactivated_1"
+	WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Border
+			CornerRadius="10"
+			Background="#FF4F5119"
+			Opacity="0.8">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="25" />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Grid
+					Grid.Row="0"
+					Height="20">
+					<TextBlock
+						Text=" Warcraft3 Key"
+						Margin="7,0,0,0"
+						VerticalAlignment="Center"
+						Foreground="White"
+						HorizontalAlignment="Left" />
+					<Button
+						Name="btnClose"
+						Style="{DynamicResource btnCloseStyle}"
+						VerticalAlignment="Bottom"
+						HorizontalAlignment="Right"
+						Margin="0,0,10,2"
+						Click="btnClose_Click" />
+					<Line
+						X1="0"
+						X2="265"
+						Stroke="White"
+						VerticalAlignment="Bottom"
+						StrokeThickness="0.5" />
+				</Grid>
+				<Grid
+					Grid.Row="1">
+					<TabControl
+						Background="Transparent"
+						Margin="0,10,0,0"
+						BorderBrush="Transparent">
+						<TabItem
+							Header="键盘改键"
+							BorderBrush="Transparent"
+							Background="Transparent"
+							Height="20">
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition
+										Height="115" />
+									<RowDefinition
+										Height="180" />
+								</Grid.RowDefinitions>
+								<Grid
+									Grid.Row="0"
+									Name="gridResKey">
+									<Line
+										X1="0"
+										X2="250"
+										VerticalAlignment="Top"
+										Stroke="LightGray"
+										HorizontalAlignment="Center"
+										StrokeThickness="0.5"
+										Margin="0,5,0,0" />
+									<TextBlock
+										Margin="70,12,0,0"
+										Text="=Num7"
+										Height="20"
+										Width="50"
+										Foreground="White"
+										VerticalAlignment="Top"
+										HorizontalAlignment="Left" />
+									<TextBlock
+										Margin="70,42,0,0"
+										Text="=Num4"
+										Height="20"
+										Width="50"
+										VerticalAlignment="Top"
+										HorizontalAlignment="Left"
+										Foreground="White" />
+									<TextBlock
+										Margin="70,72,0,0"
+										Text="=Num1"
+										Height="20"
+										Width="50"
+										VerticalAlignment="Top"
+										HorizontalAlignment="Left"
+										Foreground="White" />
+									<Line
+										X1="132"
+										X2="132"
+										Stroke="LightGray"
+										Y1="10"
+										Y2="110"
+										StrokeThickness="0.5" />
+									<TextBlock
+										Margin="205,12,0,0"
+										Text="=Num8"
+										Height="20"
+										Width="50"
+										VerticalAlignment="Top"
+										HorizontalAlignment="Left"
+										Foreground="White" />
+									<TextBlock
+										Margin="205,42,0,0"
+										Text="=Num5"
+										Height="20"
+										Width="50"
+										VerticalAlignment="Top"
+										HorizontalAlignment="Left"
+										Foreground="White" />
+									<TextBlock
+										Margin="205,72,0,0"
+										Text="=Num2"
+										Height="20"
+										Width="50"
+										VerticalAlignment="Top"
+										HorizontalAlignment="Left"
+										Foreground="White" />
+								</Grid>
+								<Grid
+									Grid.Row="1"
+									Name="gridCustomKey">
+									<Line
+										X1="0"
+										X2="250"
+										VerticalAlignment="Top"
+										Stroke="LightGray"
+										HorizontalAlignment="Center"
+										StrokeThickness="0.5" />
+									<TextBlock
+									Text="自定义改键:"
+									Foreground="White"
+									Margin="10,7,0,0"
+									HorizontalAlignment="Left"
+									Height="20"
+									VerticalAlignment="Top" />
+									<Line
+										X1="132"
+										X2="132"
+										Stroke="LightGray"
+										Y1="5"
+										Y2="173"
+										StrokeThickness="0.5" />
+								</Grid>
+							</Grid>
+						</TabItem>
+						<TabItem
+							Header="鼠标改键"
+							Height="20"
+							Background="Transparent"
+							BorderBrush="Transparent">
+							<Grid>
+								<TextBlock
+									Text="鼠标改键:"
+									Foreground="White"
+									Margin="10,7,0,0"
+									HorizontalAlignment="Left"
+									Height="20"
+									VerticalAlignment="Top" />
+								<Line
+									X1="0"
+									X2="250"
+									VerticalAlignment="Top"
+									Stroke="LightGray"
+									HorizontalAlignment="Center"
+									StrokeThickness="0.5"
+									Margin="0,30,0,0" />
+								<TextBlock
+									Text="自定义按键一:"
+									Foreground="White"
+									Margin="17,40,0,0"
+									HorizontalAlignment="Left"
+									Height="20"
+									VerticalAlignment="Top" />
+								<TextBox
+									Name="tbXButton1"
+									HorizontalAlignment="Right"
+									VerticalAlignment="Top"
+									Height="20"
+									Width="100"
+									Margin="0,40,50,0"
+									KeyDown="tbXButton1_KeyDown" />
+								<TextBlock
+									Text="自定义按键二:"
+									Foreground="White"
+									Margin="17,70,0,0"
+									HorizontalAlignment="Left"
+									Height="20"
+									VerticalAlignment="Top" />
+								<TextBox
+									Name="tbXButton2"
+									HorizontalAlignment="Right"
+									VerticalAlignment="Top"
+									Height="20"
+									Width="100"
+									Margin="0,70,50,0"
+									KeyDown="tbXButton2_KeyDown" />
+								<TextBlock
+									Text="鼠标中键:"
+									Foreground="White"
+									Margin="17,100,0,0"
+									HorizontalAlignment="Left"
+									Height="20"
+									VerticalAlignment="Top" />
+								<TextBox
+									Name="tbMiddleButton"
+									HorizontalAlignment="Right"
+									VerticalAlignment="Top"
+									Height="20"
+									Width="100"
+									Margin="0,100,50,0"
+									KeyDown="MiddleButton_KeyDown" />
+							</Grid>
+						</TabItem>
+						<TabItem 
+							Header="卡尔改键" 
+							Height="20" 
+							Background="Transparent" 
+							BorderBrush="Transparent">
+							<Grid Name="gridKaelKey">
+								<TextBlock
+									Text="卡尔改键:"
+									Foreground="White"
+									Margin="10,7,0,0"
+									HorizontalAlignment="Left"
+									Height="20"
+									VerticalAlignment="Top" />
+								<Line
+									X1="0"
+									X2="250"
+									VerticalAlignment="Top"
+									Stroke="LightGray"
+									HorizontalAlignment="Center"
+									StrokeThickness="0.5"
+									Margin="0,30,0,0" />
+								<Line
+									X1="132"
+									X2="132"
+									Stroke="LightGray"
+									Y1="32"
+									Y2="230"
+									StrokeThickness="0.5" />
+							</Grid>
+						</TabItem>
+					</TabControl>
+				</Grid>
+			</Grid>
+		</Border>
+	</Grid>
+</Window>
